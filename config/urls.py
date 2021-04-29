@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 from django.conf.urls import url #추가
-from almondgo.views import boardView
+# from almondgo.views import boardView
 from almondgo.views import test
 from almondgo.views import result
 from almondgo.views import start
@@ -31,13 +31,14 @@ from almondgo.views import fmain
 from kakaopay.views import index
 from kakaopay.views import approval
 from almondgo.views import menupick
+# from django.contrib import Product
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('view/', boardView),
+#    path('view/', boardView),
     path('', include ('blog.urls')),
     path('test/',test),
     path('search/', result),
@@ -53,6 +54,8 @@ urlpatterns = [
     path('kakaopay/', index),
     path('approval/', approval),
     path('menupick/', menupick),
+#    path('summernote/', include('djnago_summernote.urls')),
+#    path('product_register/', ProductRegister),
    
 
 ]
